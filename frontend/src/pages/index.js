@@ -1,13 +1,17 @@
 import Header from '../components/Header';
+import About from '../sections/About';
+import Projects from '../sections/Projects';
+import Skills from '../sections/Skills';
+import Contact from '../sections/Contact';
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Header />
-      <section>
-        <h1>À propos de moi</h1>
-        <p>Développeur web junior passionné par le développement front-end et back-end.</p>
-      </section>
-    </>
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
+    </div>
   );
 }
