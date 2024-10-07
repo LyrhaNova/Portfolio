@@ -1,0 +1,43 @@
+#about {
+   .divText {
+     position: relative;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     width: 55%;
+     height: 100%;
+     border-radius: 50px;
+     border: 3px solid rgba(160, 33, 160, 0.2);
+     padding: 50px;
+     z-index: 1;
+ 
+     h1 {
+       margin-bottom: 70px;
+     }
+ 
+     p {
+       width: 70%;
+     }
+ 
+     .backText {
+       position: absolute;
+       font-family: 'Orbitron', sans-serif;
+       width: 100%;
+       text-align: center;
+       font-weight: 600;
+       top: 18%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       font-size: 100px;
+       color: rgba(160, 33, 160, 0.1);
+       z-index: -1;
+       pointer-events: none;
+       overflow: hidden; /* Masque le texte avant l'animation */
+       
+       p {
+         width: 100%;
+       }
+     }
+   }
+ }
+ 
