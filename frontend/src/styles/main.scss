@@ -15,15 +15,33 @@ body {
 section {
   display: flex;
   justify-content: center;
-  margin-bottom: 150px;
+  // margin-bottom: 150px;
 }
 
 h1 {
   letter-spacing: 5px;
 }
 
-i {
+i, .iconeFont {
 // font-size: 70px;
 font-size: 3em;
 color: white;
+}
+
+.backText {
+  position: absolute;
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: rgba(160, 33, 160, 0.2);
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  
+  p {
+    width: 100%;
+  }
 }

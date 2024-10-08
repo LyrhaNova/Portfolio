@@ -1,3 +1,5 @@
+import '../styles/layout/_projects.scss';
+
 export default function Projects() {
   return (
     <section id="projects">
