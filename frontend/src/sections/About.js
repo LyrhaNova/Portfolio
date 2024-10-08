@@ -10,9 +10,9 @@ export default function About() {
         <div className="backText">
           <Typewriter
             words={['Qui suis-je ?']}
-            loop={false} // true pour répéter en boucle
+            loop={false}
             cursor
-            cursorStyle=""
+            cursorStyle="_"
             typeSpeed={50}
             deleteSpeed={70}
             delaySpeed={3000}
