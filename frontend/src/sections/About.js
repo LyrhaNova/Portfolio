@@ -9,7 +9,7 @@ export default function About() {
         <h1>À PROPOS</h1>
         <div className="backText">
           <Typewriter
-            words={['Qui suis-je ?']}
+            words={['Who ?']}
             loop={false}
             cursor
             cursorStyle="_"

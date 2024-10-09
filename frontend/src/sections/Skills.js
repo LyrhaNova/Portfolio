@@ -19,7 +19,7 @@ export default function Skills() {
         <h1>COMPÉTENCES</h1>
         <div className="backText">
           <Typewriter
-            words={['Technologies & Outils']}
+            words={['Techs & Tools']}
             loop={false}
             cursor
             cursorStyle="_"
