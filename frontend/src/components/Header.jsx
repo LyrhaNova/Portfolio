@@ -6,7 +6,7 @@ export default function Header() {
   useEffect(() => {
     const nav = document.querySelector('nav');
     const handleScroll = () => {
-      if (window.scrollY > 100) { // Par exemple, à partir de 100px de scroll
+      if (window.scrollY > 850) {
         nav.classList.add('opaque');
       } else {
         nav.classList.remove('opaque');
@@ -23,11 +23,11 @@ export default function Header() {
     <header>
       <nav>
         <ul className="nav-links">
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="">Admin</a></li>
+          <li><a href="#about">À PROPOS</a></li>
+          <li><a href="#projects">PROJETS</a></li>
+          <li><a href="#skills">COMPÉTENCES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="">ADMIN</a></li>
         </ul>
       </nav>
     </header>

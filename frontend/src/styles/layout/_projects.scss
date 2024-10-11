@@ -1,4 +1,124 @@
 #projects {
-   display: flex;
-   height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+
+  .divProjects {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    border-radius: 50px;
+    border: 3px solid rgba(160, 33, 160, 0.2);
+    padding: 50px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid transparent; /* Bordure transparente par défaut */
+      transition: border-color 0.3s ease;
+      border-radius: 50px;
+      pointer-events: none; /* Pour ne pas interférer avec les événements de la section */
+    }
+
+    &:hover:before {
+      border-color: rgb(160, 33, 160); /* Applique une couleur rouge au survol */
+      border-radius: 50px;
+      filter: drop-shadow(0 0 10px rgb(160, 33, 160)); /* Effet de drop-shadow sur la pseudo-bordure */
+    }
+
+    .swiper {
+      width: 100%; // Limite la largeur du swiper à 100% de son conteneur
+      height: auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 350px;  // Largeur des cartes (ajustée)
+      height: 600px; // Hauteur des cartes (ajustée)
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: rgba(160, 33, 160, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%; // Utiliser 100% pour remplir le conteneur de la diapositive
+      height: 70%; // Utiliser 100% pour remplir la hauteur de la diapositive
+
+      .card-image {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+        border-bottom: 2px solid rgba(160, 33, 160,);
+      }
+
+      .card-title {
+        text-align: center;
+        font-style: italic;
+        font-size: 20px;
+        margin: 10px 0 10px 0;
+      }
+
+      .card-description {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: rgb(160, 33, 160);
+      font-size: 2rem;
+      padding: 10px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    .swiper-button-prev {
+      left: -5px;
+    }
+
+    .swiper-button-next {
+      right: -5px;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #ffffff;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      opacity: 1;
+      transition: background-color 0.3s ease;
+
+      &.swiper-pagination-bullet-active {
+        background-color: rgb(160, 33, 160);
+      }
+    }
+    .backText {
+      top: 12%;
+      left: 50%;
+   }
+  }
 }
+
+
+
+
+ 
