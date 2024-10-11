@@ -1,0 +1,111 @@
+.swiper {
+   width: 100%;
+   height: auto;
+ }
+
+ .swiper-slide {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 800px;
+ }   
+ 
+ .card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   border-radius: 20px;
+   width: 80%;
+   height: 540px;
+   padding: 20px 20px 0 20px;
+   transition: transform 0.3s ease-out;
+   margin-bottom: 50px;
+   &:hover {
+      transform: scale(1.04);
+      background-color: rgb(160, 33, 160, 0.03);
+      .card-description {
+         border: 2px solid rgb(160, 33, 160);
+      }
+      .card-description p {
+         color: white;
+      }
+    }
+ 
+   .card-image {
+     width: 100%;
+     height: 250px;
+     border-radius: 10px;
+     overflow: hidden;
+     position: relative;
+ 
+     img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
+     }
+   }
+ 
+   .card-description {
+      border: 2px solid rgb(160, 33, 160, 0.5);
+      height: 200px;
+      padding: 15px;
+
+      h2 {
+         text-align: center;
+      }
+
+      p {
+         text-align: left;
+         font-size: 2px;
+         color: rgb(129, 129, 129);
+      }
+    }
+    
+   .card-title {
+     font-style: italic;
+     font-size: 20px;
+     margin: 10px 0;
+   }
+ 
+   .card-description p {
+     font-size: 0.9rem;
+     margin: 0;
+   }
+ }
+ 
+ .swiper-button-prev,
+ .swiper-button-next {
+   font-size: 2rem;
+   transition: transform 0.3s ease;
+
+   &::after {
+      color: rgb(160, 33, 160);
+   }
+
+   &:hover {
+     transform: scale(1.3);
+   }
+ }
+
+ .swiper-button-prev {
+   left: -5px;
+ }
+
+ .swiper-button-next {
+   right: -5px;
+ }
+
+ .swiper-pagination-bullet {
+   background-color: red;
+   width: 12px;
+   height: 12px;
+   margin: 0 5px;
+   opacity: 1;
+   transition: background-color 0.3s ease;
+
+   &.swiper-pagination-bullet-active {
+     background-color: rgb(160, 33, 160);
+   }
+ }

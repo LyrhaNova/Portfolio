@@ -1,4 +1,5 @@
 import '../styles/layout/_projects.scss';
+import '../styles/components/_carousel.scss';
 import ProjectsCarousel from '../components/Slideshow.jsx';
 import { Typewriter } from 'react-simple-typewriter';
 
