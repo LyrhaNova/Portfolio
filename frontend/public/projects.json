@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Booki",
+    "description": "Création d'une page d'accueil d'une agence de voyage.",
+    "largeDescription": "Dans le cadre de la formation OpenClassRooms en Développement web, le PROJET 2 englobe les bases du front-end en HTML5 et CSS3. Dans ce Projet, vous créerez la page d'accueil d'une agence de voyage nommé Booki, à partir d'une maquette Figma.",
+    "techs" : "HTML5 & CSS3",
+    "imageUrl": "/assets/projet1_booki.webp",
+    "github": "https://github.com/LyrhaNova/OCR-Project_2"
+  },
+  {
+    "title": "Sophie Bluel",
+    "description": "Création d'une page web dynamique.",
+    "largeDescription": "Dans le cadre de la formation OpenClassRooms en Développement web, le PROJET 3 englobe les bases du front-end en Javascript. Dans ce Projet, vous rendrez dynamique le portfolio d'une architecte tout en lui permettant de se connecter, ajouter et supprimer ses projets.",
+    "techs" : "Javascript",
+    "imageUrl": "/assets/projet2_sb1.webp",
+    "github": "https://github.com/LyrhaNova/OCR-Project_3"
+  },
+  {
+    "title": "Nina Carducci",
+    "description": "Optimisation et debogage d'un site de photographe.",
+    "largeDescription": "Dans le cadre de la formation OpenClassRooms en Développement web, le PROJET 4 nous fait travailler l'optimisation, le débogage et le référencement d'un site déjà présent. Principalement, le SEO et l'accessibilité sont priviligiés dans ce projet.",
+    "techs" : "HTML5, CSS3, Javascript, Optimisation, Debug, SEO",
+    "imageUrl": "/assets/projet3_nc1.webp",
+    "github": "https://github.com/LyrhaNova/OCR-Project_4"
+  },
+  {
+    "title": "Kasa",
+    "description": "Création d'une application web de location immobilière.",
+    "largeDescription": "Dans le cadre de la formation OpenClassRooms en Développement web, le PROJET 5 nous fait implémenter le front-end d'une application en utilisant React et React Router, afin de créer une expérience utilisateur moderne et réactive. De plus, nous découvrons l'utilisation de Sass et des animations CSS.",
+    "techs" : "React, Vite, React Router, Javascript, SCSS",
+    "imageUrl": "/assets/projet4_kasa1.webp",
+    "github": "https://github.com/LyrhaNova/OCR-Project_5"
+  },
+  {
+    "title": "Mon Vieux Grimoire",
+    "description": "Développement du back-end d'un site de notation de livres.",
+    "largeDescription": "Dans le cadre de la formation OpenClassRooms en Développement web, le PROJET 6 nous amène à développer le bacek-end d'un site de notation de livre, en créant un serveur avec Express et le connecter à une base de données MongoDB.",
+    "techs" : "Javascript, Express, MongoDB, Mongoose, CRUD",
+    "imageUrl": "/assets/projet5_mvg1.webp",
+    "github": "https://github.com/LyrhaNova/OCR-Project_6"
+  }
+]
+ 
