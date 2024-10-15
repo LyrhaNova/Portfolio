@@ -1,9 +1,30 @@
-import '../styles/components/_modal.scss'; // Ajoutez votre style pour la modale
+import React, { useEffect, useState } from 'react';
+import '../styles/components/_modal.scss';
 
-const Modal = ({ onClose, children }) => {
+const Modal = ({ onClose, showModal, children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (showModal) {
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    } else {
+      setIsVisible(false);
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showModal]);
+
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className={`modal-overlay ${isVisible ? 'visible' : ''}`} onClick={onClose}>
+      <div
+        className={`modal-content ${isVisible ? 'visible' : ''}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <button className="modal-close" onClick={onClose}>✖</button>
         {children}
       </div>

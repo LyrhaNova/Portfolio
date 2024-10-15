@@ -20,7 +20,7 @@
    height: 540px;
    padding: 20px 20px 0 20px;
    transition: transform 0.3s ease-out;
-   margin: 20px 0 50px 0;
+   margin-bottom: 50px;
    
 
    cursor: pointer;
@@ -51,9 +51,13 @@
    }
  
    .card-description {
-      border: 2px solid rgb(160, 33, 160, 0.5);
-      height: 200px;
-      padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid rgb(160, 33, 160, 0.5);
+    height: 200px;
+    padding: 15px;
+    width: 92%;
 
       h2 {
          text-align: center;

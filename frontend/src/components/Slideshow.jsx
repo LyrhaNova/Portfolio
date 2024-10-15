@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -10,7 +12,6 @@ const ProjectsCarousel = () => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const modalImageRef = useRef(null); 
 
   // Charger les données du fichier JSON
   useEffect(() => {
@@ -34,20 +35,6 @@ const ProjectsCarousel = () => {
     setShowModal(false);
     setSelectedProject(null);
   };
-
-  // Fonction pour ajuster le défilement en fonction de la hauteur de l'image
-  const adjustImageScroll = () => {
-    if (modalImageRef.current) {
-      const imageHeight = modalImageRef.current.scrollHeight;
-      const containerHeight = modalImageRef.current.parentElement.clientHeight;
-      const scrollDistance = imageHeight - containerHeight;
-
-      if (scrollDistance > 0) {
-        modalImageRef.current.style.setProperty('--scroll-distance', `${scrollDistance}px`);
-        modalImageRef.current.classList.add('animated');
-      }
-    }
-};
 
   return (
     <>
@@ -76,21 +63,25 @@ const ProjectsCarousel = () => {
       </Swiper>
 
       {showModal && (
-        <Modal onClose={handleCloseModal}>
+        <Modal onClose={handleCloseModal} showModal={showModal}>
           {selectedProject && (
             <>
               <h2>{selectedProject.title}</h2>
               <div className="image-container">
                 <img
-                  ref={modalImageRef} // Référence à l'image pour ajuster le scroll
                   src={selectedProject.imageUrl}
                   alt={selectedProject.title}
                   className="modal-image"
-                  onLoad={adjustImageScroll} // Ajuste le scroll une fois l'image chargée
                 />
               </div>
-              <p>{selectedProject.largeDescription || selectedProject.description}</p>
-              <p><strong>Technologies :</strong> {selectedProject.techs}</p>
+              <div className="modal-infos">
+                <p>{selectedProject.largeDescription || selectedProject.description}</p>
+                <p>Technologies : {selectedProject.techs}</p>
+                <div className='github-link'>
+                  <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">Lien Github</a>
+                  <FontAwesomeIcon icon={faGithub} />
+                </div>
+              </div>
             </>
           )}
         </Modal>

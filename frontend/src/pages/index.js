@@ -4,6 +4,7 @@ import About from '../sections/About';
 import Projects from '../sections/Projects';
 import Skills from '../sections/Skills';
 import Contact from '../sections/Contact';
+import BackToTop from '../components/BackToTop';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
+      <BackToTop />
     </div>
   );
 }
