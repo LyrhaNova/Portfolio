@@ -1,57 +1,57 @@
 #contact {
-   display: flex;
-   height: 1000px;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  height: 1000px;
+  align-items: center;
+  justify-content: center;
 
-   .contact-wrapper {
-     width: 100%;
-     display: flex;
-     justify-content: space-around;
-     padding: 20px 40px;
- 
-     .contact-form-container {
-       width: 40%;
-       padding-right: 20px;
- 
-       h1 {
-         margin-bottom: 20px;
-       }
- 
-       .form-group {
-         margin-bottom: 15px;
- 
-         label {
-           display: block;
-           margin-bottom: 5px;
-           font-weight: bold;
-           letter-spacing: 5px;
-         }
- 
-         input,
-         textarea {
-           width: 100%;
-           padding: 10px;
-           border: 1px solid rgba(160, 33, 160, 0.3);
-           border-radius: 5px;
-         }
- 
-         textarea {
-           height: 150px;
-         }
-       }
- 
-       .submit-btn {
-         padding: 10px 20px;
-         background-color: rgb(160, 33, 160);
-         color: #fff;
-         border: none;
-         border-radius: 5px;
-         cursor: pointer;
-       }
-     }
- 
-     .contact-info {
+  .contact-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 40px;
+
+    .contact-form-container {
+      width: 40%;
+      padding-right: 20px;
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          letter-spacing: 5px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid rgba(160, 33, 160, 0.3);
+          border-radius: 5px;
+        }
+
+        textarea {
+          height: 150px;
+        }
+      }
+
+      .submit-btn {
+        padding: 10px 20px;
+        background-color: rgb(160, 33, 160);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .contact-info {
       display: flex;
       flex-direction: column;
       width: 33%;
@@ -73,13 +73,16 @@
         justify-content: center;
         align-items: center;
         margin-top: 30px;
+        width: 100%;
     
         .logo {
-          width: 60%;
+          max-width: 60%;
+          height: auto;
         }
       }
     }
     
-   }
- }
+  }
+}
+
  

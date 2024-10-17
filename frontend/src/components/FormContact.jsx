@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -30,7 +31,6 @@ export default function Contact() {
   };
 
   return (
-   //  <section id="contact">
       <div className="contact-wrapper">
         <div className="contact-form-container">
 
@@ -77,15 +77,23 @@ export default function Contact() {
         </div>
 
         <div className="contact-info">
-          <h2>MES COORDONNÉES</h2>
-          <p>Email: celine.b.dev@gmail.com</p>
-          <p>Téléphone: 06.64.70.67.77</p>
-          <p>Adresse: 31000, Toulouse</p>
-          <div className="container-logo">
-          <img src="/assets/logo_poupou_small.webp" alt="Logo" className="logo" />
-          </div>
-        </div>
+  <h2>MES COORDONNÉES</h2>
+  <p>Email: celine.b.dev@gmail.com</p>
+  <p>Téléphone: 06.64.70.67.77</p>
+  <p>Adresse: 31000, Toulouse</p>
+  <div className="container-logo">
+    <Image
+      src="/assets/logo_poupou_small.webp"
+      alt="Logo"
+      className="logo"
+      width={180}
+      height={180}
+      style={{ width: '100%', height: 'auto' }}
+      priority 
+    />
+  </div>
+</div>
+
       </div>
-   //  </section>
   );
 }

@@ -1,15 +1,17 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import '../styles/layout/_skills.scss';
 import '../styles/main.scss';
 import { Typewriter } from 'react-simple-typewriter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faGear } from '@fortawesome/free-solid-svg-icons';
-import { faGitkraken } from '@fortawesome/free-brands-svg-icons';
-import { faChrome } from '@fortawesome/free-brands-svg-icons';
-import { faDiagramProject } from '@fortawesome/free-solid-svg-icons';
-import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
-import { faBugSlash } from '@fortawesome/free-solid-svg-icons';
+import {
+  faDatabase,
+  faGear,
+  faDiagramProject,
+  faArrowTrendUp,
+  faBugSlash,
+} from '@fortawesome/free-solid-svg-icons';
+import { faGitkraken, faChrome } from '@fortawesome/free-brands-svg-icons';
 
 export default function Skills() {
   return (
@@ -32,38 +34,21 @@ export default function Skills() {
           <div className="divSkills_container">
             <h2>Frontend</h2>
             <div className="divSkills_container_box">
-              <div className="icon-wrapper">
-                <i className="devicon-html5-plain"></i>
-                <p>HTML5</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-css3-plain"></i>
-                <p>CSS3</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-sass-original"></i>
-                <p>SASS</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-javascript-plain"></i>
-                <p>JavaScript</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-react-original"></i>
-                <p>React</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-nextjs-plain"></i>
-                <p>Next.js</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-vite-original"></i>
-                <p>Vite</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-typescript-plain"></i>
-                <p>TypeScript</p>
-              </div>
+              {[
+                'html5',
+                'css3',
+                'sass',
+                'javascript',
+                'react',
+                'nextjs',
+                'vite',
+                'typescript',
+              ].map((skill) => (
+                <div className="icon-wrapper" key={skill}>
+                  <i className={`devicon-${skill}-plain`}></i>
+                  <p>{skill.charAt(0).toUpperCase() + skill.slice(1)}</p>
+                </div>
+              ))}
             </div>
 
             <h2>Backend</h2>
@@ -73,8 +58,7 @@ export default function Skills() {
                 <p>Node.js</p>
               </div>
               <div className="icon-wrapper">
-                <i className="devicon-express-original"></i>
-                <p>Express</p>
+                <i className="devicon-express-original"></i> <p>Express</p>
               </div>
               <div className="icon-wrapper">
                 <FontAwesomeIcon icon={faGear} className="iconeFont" />
@@ -85,11 +69,12 @@ export default function Skills() {
             <h2>Base de données</h2>
             <div className="divSkills_container_box">
               <div className="icon-wrapper">
-                <i className="devicon-mongodb-plain"></i>
+                <i className="devicon-mongodb-plain"></i> {/* Icône MongoDB */}
                 <p>MongoDB</p>
               </div>
               <div className="icon-wrapper">
-                <i className="devicon-mongoose-original"></i>
+                <i className="devicon-mongoose-original"></i>{' '}
+                {/* Vérifie si c'est la bonne icône pour Mongoose */}
                 <p>Mongoose</p>
               </div>
               <div className="icon-wrapper">
@@ -100,18 +85,12 @@ export default function Skills() {
 
             <h2>Outils</h2>
             <div className="divSkills_container_box">
-              <div className="icon-wrapper">
-                <i className="devicon-vscode-plain"></i>
-                <p>VSCode</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-git-plain"></i>
-                <p>Git</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-github-original"></i>
-                <p>GitHub</p>
-              </div>
+              {['vscode', 'git', 'github', 'postman', 'figma'].map((tool) => (
+                <div className="icon-wrapper" key={tool}>
+                  <i className={`devicon-${tool}-plain`}></i>
+                  <p>{tool.charAt(0).toUpperCase() + tool.slice(1)}</p>
+                </div>
+              ))}
               <div className="icon-wrapper">
                 <FontAwesomeIcon icon={faGitkraken} className="iconeFont" />
                 <p>GitKraken</p>
@@ -120,47 +99,38 @@ export default function Skills() {
                 <FontAwesomeIcon icon={faChrome} className="iconeFont" />
                 <p>Chrome DevTools</p>
               </div>
-              <div className="icon-wrapper">
-                <i className="devicon-postman-plain"></i>
-                <p>Postman</p>
-              </div>
-              <div className="icon-wrapper">
-                <i className="devicon-figma-plain"></i>
-                <p>Figma</p>
-              </div>
             </div>
 
             <h2>Gestion</h2>
             <div className="divSkills_container_box">
-              <div className="icon-wrapper">
-                <FontAwesomeIcon
-                  icon={faDiagramProject}
-                  className="iconeFont"
-                />
-                <p>Gestion de Projets</p>
-              </div>
-              <div className="icon-wrapper">
-                <FontAwesomeIcon icon={faArrowTrendUp} className="iconeFont" />
-                <p>Optimisation</p>
-              </div>
-              <div className="icon-wrapper">
-                <FontAwesomeIcon icon={faBugSlash} className="iconeFont" />
-                <p>Debug</p>
-              </div>
+              {[
+                { icon: faDiagramProject, text: 'Gestion de Projets' },
+                { icon: faArrowTrendUp, text: 'Optimisation' },
+                { icon: faBugSlash, text: 'Debug' },
+              ].map(({ icon, text }) => (
+                <div className="icon-wrapper" key={text}>
+                  <FontAwesomeIcon icon={icon} className="iconeFont" />
+                  <p>{text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+
         <div className="divCv">
           <h1>CV</h1>
           <div className="containerCV">
-            <img
-              src="../assets/CV_Bouhafs-Celine_light.png"
+            <Image
+              src="/assets/CV_Bouhafs-Celine_light.png"
               alt="CV"
               className="CV"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <a
-            href="../assets/CV_Bouhafs-Celine_light.png"
+            href="/assets/CV_Bouhafs-Celine_light.png"
             className="cvLink"
             download="CV_Bouhafs-Celine"
           >

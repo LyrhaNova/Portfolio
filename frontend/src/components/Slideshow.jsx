@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -40,7 +41,7 @@ const ProjectsCarousel = () => {
     <>
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={0}
+        spaceBetween={10}
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
@@ -50,7 +51,12 @@ const ProjectsCarousel = () => {
           <SwiperSlide key={index}>
             <div className="card" onClick={() => handleCardClick(project)}>
               <div className="card-image">
-                <img src={project.imageUrl} alt={project.title} />
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  width={300}
+                  height={200}
+                />
               </div>
               <div className="card-description">
                 <h2 className="card-title">{project.title}</h2>
@@ -68,19 +74,21 @@ const ProjectsCarousel = () => {
             <>
               <h2>{selectedProject.title}</h2>
               <div className="image-container">
-                <img
+                <Image
                   src={selectedProject.imageUrl}
                   alt={selectedProject.title}
                   className="modal-image"
+                  width={500}
+                  height={300}
                 />
               </div>
               <div className="modal-infos">
                 <p>{selectedProject.largeDescription || selectedProject.description}</p>
                 <p>Technologies : {selectedProject.techs}</p>
-                <div className='github-link'>
-                  <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">Lien Github</a>
-                  <FontAwesomeIcon icon={faGithub} />
-                </div>
+                 <div className='github-link'>
+                   <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">Lien Github</a>
+                   <FontAwesomeIcon icon={faGithub} />
+                 </div>
               </div>
             </>
           )}
@@ -91,3 +99,4 @@ const ProjectsCarousel = () => {
 };
 
 export default ProjectsCarousel;
+

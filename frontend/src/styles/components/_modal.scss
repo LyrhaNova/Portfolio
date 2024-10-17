@@ -61,17 +61,19 @@
 
   .github-link {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
-
+  
     a {
       font-weight: 600;
       text-decoration: none;
       color: rgb(160, 33, 160);
     }
+    
     svg {
-      font-size: 33px;
+      width: 33px;
+      height: auto;
       color: rgb(160, 33, 160);
     }
   }
