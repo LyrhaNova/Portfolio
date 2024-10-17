@@ -21,6 +21,7 @@ export default function HeroHeader() {
           width={750} 
           height={750}
           className="png-logo" 
+          priority
         />
       </div>
     </div>

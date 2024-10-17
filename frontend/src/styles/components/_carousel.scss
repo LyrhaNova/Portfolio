@@ -7,7 +7,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 800px;
+   height: 600px;
  }   
  
  .card {
@@ -98,12 +98,10 @@
  }
  
  .swiper-button-prev {
-   left: -15px;
    transform: translateX(-30%);
  }
  
  .swiper-button-next {
-   right: -15px;
    transform: translateX(30%);
  }
  
