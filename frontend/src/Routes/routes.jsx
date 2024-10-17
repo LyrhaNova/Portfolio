@@ -1,5 +1,3 @@
-// src/routes/routes.jsx
-
 import Link from 'next/link';
 import Header from '../components/Header';
 import About from '../pages/About';
@@ -12,7 +10,6 @@ export default function AppRoutes() {
     <>
       <Header />
       <main>
-        {/* Définir les liens de navigation avec next/link */}
         <nav>
           <ul>
             <li><Link href="/">À propos</Link></li>
@@ -21,8 +18,6 @@ export default function AppRoutes() {
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
-
-        {/* Afficher le contenu des pages selon la route */}
         <About />
         <Projects />
         <Skills />

@@ -1,7 +1,26 @@
+import '../styles/layout/_contact.scss';
+import '../styles/components/_formContact.scss';
+import FormContact from '../components/FormContact.jsx';
+import { Typewriter } from 'react-simple-typewriter';
+
 export default function Contact() {
   return (
     <section id="contact">
-      <h1>Contact</h1>
+      <div className="divContact">
+        <h1>CONTACT</h1>
+        <div className="backText">
+          <Typewriter
+            words={['Wanna talk ?']}
+            loop={false}
+            cursor
+            cursorStyle="_"
+            typeSpeed={50}
+            deleteSpeed={70}
+            delaySpeed={3000}
+          />
+        </div>
+        <FormContact />
+      </div>
     </section>
   );
 }

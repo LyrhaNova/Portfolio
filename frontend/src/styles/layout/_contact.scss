@@ -1,0 +1,45 @@
+#contact {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 1000px;
+ 
+   .divContact {
+     position: relative;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     width: 60%;
+     border-radius: 50px;
+     border: 3px solid rgba(160, 33, 160, 0.2);
+     padding: 50px 50px 20px 50px;
+ 
+     &:before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       border: 2px solid transparent;
+       transition: border-color 0.3s ease;
+       border-radius: 50px;
+       // pointer-events: none;
+     }
+ 
+     &:hover:before {
+       border-color: rgb(160, 33, 160);
+       border-radius: 50px;
+       filter: drop-shadow(0 0 10px rgb(160, 33, 160));
+     }
+
+     .backText {
+       top: 17%;
+       left: 50%;
+    }
+   }
+ 
+   h1 {
+     margin-bottom: 70px;
+   }
+ }
