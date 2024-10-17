@@ -1,5 +1,5 @@
 import '../styles/main.scss';
-import AppRoutes from './index';
+// import AppRoutes from './index';
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useEffect } from 'react';
 import '../styles/layout/_header.scss';
 
 export default function Header() {
