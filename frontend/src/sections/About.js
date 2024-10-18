@@ -4,10 +4,10 @@ import { Typewriter } from 'react-simple-typewriter';
 
 export default function About() {
   return (
-    <section id="about">
-      <div className="divText">
+    <section id="about" className="about">
+      <div className="about__content">
         <h1>À PROPOS</h1>
-        <div className="backText">
+        <div className="about__back-text">
           <Typewriter
             words={['Who ?']}
             loop={false}
@@ -18,7 +18,7 @@ export default function About() {
             delaySpeed={3000}
           />
         </div>
-        <p>
+        <p className="about__description">
           Lorem ipsum dolor sit amet. Id enim quod et officia molestiae est
           consequatur maiores nam animi voluptatum sit tempora internos eos
           ducimus officia! Ea galisum vitae 33 porro nostrum id mollitia

@@ -1,10 +1,11 @@
-#projects {
+
+.projects {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 1000px;
 
-  .divProjects {
+  &__content {
     position: relative;
     display: flex;
     align-items: center;
@@ -24,20 +25,21 @@
       border: 2px solid transparent;
       transition: border-color 0.3s ease;
       border-radius: 50px;
-      // pointer-events: none;
     }
 
     &:hover:before {
       border-color: rgb(160, 33, 160);
-      border-radius: 50px;
       filter: drop-shadow(0 0 10px rgb(160, 33, 160));
     }
 
-
     .backText {
-      top: 13%;
+      position: absolute;
+      top: 7%;
       left: 50%;
-   }
+      transform: translateX(-50%);
+      color: rgba(160, 33, 160, 0.1);
+      font-size: 75px;
+    }
   }
 
   h1 {

@@ -1,16 +1,11 @@
-#contact {
-  // display: flex;
-  // height: 1000px;
-  // align-items: center;
-  // justify-content: center;
-
-  .contact-wrapper {
+.contact {
+  &__wrapper {
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 20px 40px;
 
-    .contact-form-container {
+    &__form-container {
       width: 40%;
       padding-right: 20px;
 
@@ -51,7 +46,7 @@
       }
     }
 
-    .contact-info {
+    &__infos {
       display: flex;
       flex-direction: column;
       width: 33%;

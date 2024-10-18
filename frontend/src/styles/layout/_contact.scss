@@ -1,11 +1,10 @@
-#contact {
+.contact {
   display: flex;
   height: 900px;
   align-items: center;
   justify-content: center;
 
- 
-   .divContact {
+   &__container {
      position: relative;
      display: flex;
      align-items: center;
@@ -25,7 +24,6 @@
        border: 2px solid transparent;
        transition: border-color 0.3s ease;
        border-radius: 50px;
-       // pointer-events: none;
      }
  
      &:hover:before {

@@ -1,13 +1,13 @@
 import '../styles/layout/_projects.scss';
 import '../styles/components/_carousel.scss';
-import '../styles/components/_modal.scss';
+// import '../styles/components/_modal.scss';
 import ProjectsCarousel from '../components/Slideshow.jsx';
 import { Typewriter } from 'react-simple-typewriter';
 
 export default function Projects() {
   return (
-    <section id="projects">
-      <div className="divProjects">
+    <section id="projects" className="projects">
+      <div className="projects__content">
         <h1>PROJETS</h1>
         <div className="backText">
           <Typewriter

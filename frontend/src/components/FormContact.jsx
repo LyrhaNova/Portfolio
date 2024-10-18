@@ -14,7 +14,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send form data to the backend
+    // Envoie des données au backend
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -31,8 +31,8 @@ export default function Contact() {
   };
 
   return (
-      <div className="contact-wrapper">
-        <div className="contact-form-container">
+      <div className="contact__wrapper">
+        <div className="contact__wrapper__form-container">
 
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
@@ -76,7 +76,7 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="contact-info">
+        <div className="contact__wrapper__infos">
   <h2>MES COORDONNÉES</h2>
   <p>Email: celine.b.dev@gmail.com</p>
   <p>Téléphone: 06.64.70.67.77</p>
