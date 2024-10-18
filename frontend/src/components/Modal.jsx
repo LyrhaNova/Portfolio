@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import '../styles/components/_modal.scss';
 
 const Modal = ({ onClose, showModal, children }) => {
