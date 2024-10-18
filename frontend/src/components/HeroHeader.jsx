@@ -19,7 +19,7 @@ export default function HeroHeader() {
         <Image 
           src="/assets/logo_poupou.webp" 
           alt="Logo" 
-          width={500} 
+          width={550} 
           height={500}
           className="png-logo" 
           priority
