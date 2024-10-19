@@ -55,7 +55,7 @@ header {
 }
 
 /* Mobile devices */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header {
     nav {
       .nav-links {
@@ -78,9 +78,7 @@ header {
   }
 }
 
-
-
-@media (max-width: 525px) {
+@media (max-width: 550px) {
   header {
     nav {
       .nav-links {

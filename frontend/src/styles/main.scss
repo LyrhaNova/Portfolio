@@ -36,8 +36,26 @@ h1 {
   overflow: hidden;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   .backText {
     font-size: 50px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .backText {
+    font-size: 50px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
   }
 }

@@ -20,10 +20,10 @@ export default function HeroHeader() {
           src="/assets/logo_poupou.webp" 
           alt="Logo" 
           width={550} 
-          height={500}
+          height={500} 
           className="png-logo" 
           priority
-          sizes="(max-width: 480px) 40vw, (max-width: 1024px) 30vw, (max-width: 1200px) 20vw, 15vw" 
+          sizes="(max-width: 550px) 40vw, (max-width: 900px) 30vw, (max-width: 1000px) 20vw, 15vw"
         />
       </div>
       <div className="heroHeader__text">

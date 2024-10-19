@@ -45,10 +45,32 @@
   }
 }
 
-/* Mobile devices */
-@media (max-width: 480px) {
+
+@media (max-width: 1400px) {
   .projects {
-    height: 1400px;
+    height: 1000px;
+  
+    &__content {
+      padding: 20px;
+  
+      .backText {
+        top: 13%;
+        left: 50%;
+      }
+    }
+    h1 {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+
+}
+
+@media (max-width: 550px) {
+  .projects {
+    height: 1000px;
   
     &__content {
       width: 80%;
@@ -68,4 +90,8 @@
       left: 50%;
     }
   }
+}
+
+@media (max-width: 400px) {
+
 }
