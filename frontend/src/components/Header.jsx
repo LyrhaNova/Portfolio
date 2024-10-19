@@ -26,7 +26,7 @@ export default function Header() {
           <li><a href="#projects">PROJETS</a></li>
           <li><a href="#skills">COMPÉTENCES</a></li>
           <li><a href="#contact">CONTACT</a></li>
-          <li><a href="">ADMIN</a></li>
+          {/* <li><a href="">ADMIN</a></li> */}
         </ul>
       </nav>
     </header>

@@ -46,6 +46,20 @@ const ProjectsCarousel = () => {
         navigation
         pagination={{ clickable: true }}
         loop={true}
+        breakpoints={{
+          0: { // Pour tous les écrans inférieurs à 480px
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          600: { // Pour les écrans de 480px ou plus
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1000: { // Pour les écrans de 768px ou plus
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>

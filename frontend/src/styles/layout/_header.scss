@@ -55,56 +55,65 @@ header {
 }
 
 /* Mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   header {
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        transition: background-color 0.5s ease;
-    
-        &.opaque {
-          background-color: rgba(0, 0, 0, 0.9);
-        }
-    
-        .nav-links {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          list-style-type: none;
-          margin: 0;
-          width: 100%;
-          height: 100%;
-          padding: 0;
-    
-          li {
+    nav {
+      .nav-links {
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 20px;
             height: 100%;
             display: flex;
             align-items: center;
-            a {
-              color: white;
-              text-decoration: none;
-              font-weight: bold;
-              transition: color 0.3s ease;
-              padding: 0 35px;
-              height: 100%;
-              display: flex;
-              align-items: center;
-              letter-spacing: 5px;
-              font-size: 12px;
-              
-              &:hover {
-                color: $primary-color;
-              }
+            letter-spacing: 5px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 520px) {
+  header {
+    nav {
+      .nav-links {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        /* Style de la scrollbar pour les navigateurs WebKit */
+        &::-webkit-scrollbar {
+        height: 3px;
+        }
+        &::-webkit-scrollbar-track {
+        background: $background-color;
+        }
+        &::-webkit-scrollbar-thumb {
+        background-color: $secondary-color;
+        border-radius: 10px;
+        }
+        /*Firefox */
+        .nav-links {
+        scrollbar-color: $primary-color $secondary-color;
+        scrollbar-width: thin;
+}
+        li {
+          a {
+            padding: 0 32px;
+            font-size: 10px;
+            &:focus {
+              color: $primary-color;
             }
           }
         }
       }
     }
   }
+}

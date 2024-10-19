@@ -44,3 +44,28 @@
     margin-bottom: 70px;
   }
 }
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .projects {
+    height: 1400px;
+  
+    &__content {
+      width: 80%;
+      padding: 20px;
+  
+      .backText {
+        top: 14%;
+        left: 50%;
+      }
+    }
+  
+    h1 {
+      margin-bottom: 60px;
+    }
+    .backText {
+      top: 12%;
+      left: 50%;
+    }
+  }
+}

@@ -51,4 +51,27 @@
   }
 }
 
- 
+/* Mobile devices */
+@media (max-width: 480px) {
+  .about {
+    height: 850px;
+  
+    &__content {
+      width: 80%;
+      padding: 20px;
+    }
+  
+    h1 {
+      margin-bottom: 40px;
+    }
+  
+    &__description {
+      width: 90%;
+    }
+  
+    .backText {
+      top: 14%;
+      left: 50%;
+    }
+  }
+}

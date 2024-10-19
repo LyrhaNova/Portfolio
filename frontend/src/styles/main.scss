@@ -35,3 +35,9 @@ h1 {
   pointer-events: none;
   overflow: hidden;
 }
+
+@media (max-width: 480px) {
+  .backText {
+    font-size: 50px;
+  }
+}
