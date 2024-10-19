@@ -1,3 +1,5 @@
+@import '../abstracts/_mixins';
+
 #skills {
   display: flex;
   height: 1000px;
@@ -31,8 +33,8 @@
     }
 
     &:hover:before {
-      border-color: rgb(160, 33, 160);
-      filter: drop-shadow(0 0 10px rgb(160, 33, 160));
+      border-color: $primary-color;
+      filter: drop-shadow(0 0 10px $primary-color);
     }
   }
 
@@ -54,7 +56,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
-        border-bottom: 3px solid rgba(160, 33, 160, 0.2);
+        border-bottom: 3px solid $third-color;
         transition: border-bottom 1s ease;
 
         &:hover {
@@ -63,7 +65,7 @@
             rgba(255, 0, 0, 0),
             rgba(160, 33, 160, 0.05)
           );
-          border-bottom: 3px solid rgba(160, 33, 160);
+          border-bottom: 3px solid $primary-color;
         }
 
         .icon-wrapper {
@@ -87,11 +89,11 @@
             transform: translateY(5px);
             transition: opacity 0.3s ease, transform 0.3s ease;
             margin: 5px 0 0 0;
-            color: rgba(160, 33, 160);
+            color: $primary-color;
 
           }
           &:hover i, &:hover svg {
-            color: rgba(160, 33, 160);
+            color: $primary-color;
           }
           &:hover p {
             opacity: 1;
@@ -135,7 +137,7 @@
       color: white;
   
       &:hover {
-        color: rgba(160, 33, 160);
+        color: $primary-color
       }
     }
 
@@ -152,158 +154,3 @@
     font-size: 17px;
   }
 }
-
-// #skills {
-//   display: flex;
-//   height: 1000px;
-//   align-items: center;
-//   justify-content: center;
-//   .backText {
-//     top: 18%;
-//     left: 50%;
-//   }
-//   .skills-container {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     width: 60%;
-//     position: relative;
-//     border-radius: 50px;
-//     border: 3px solid rgba(160, 33, 160, 0.2);
-//     padding: 20px 50px;
-
-//     &:before {
-//       content: '';
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       right: 0;
-//       bottom: 0;
-//       border: 2px solid transparent;
-//       transition: border-color 0.3s ease;
-//       border-radius: 50px;
-//       pointer-events: none;
-//     }
-
-//     &:hover:before {
-//       border-color: rgb(160, 33, 160);
-//       filter: drop-shadow(0 0 10px rgb(160, 33, 160));
-//     }
-//   }
-
-//   .divSkills {
-//     width: 75%;
-//     height: 100%;
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     z-index: 1;
-
-//     .divSkills_container {
-//       width: 100%;
-
-//       &_box {
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: center;
-//         gap: 5px;
-//         border-bottom: 3px solid rgba(160, 33, 160, 0.2);
-//         transition: border-bottom 1s ease;
-
-//         &:hover {
-//           background-image: linear-gradient(
-//             to bottom,
-//             rgba(255, 0, 0, 0),
-//             rgba(160, 33, 160, 0.05)
-//           );
-//           border-bottom: 3px solid rgba(160, 33, 160);
-//         }
-
-//         .icon-wrapper {
-//           display: flex;
-//           flex-direction: column;
-//           align-items: center;
-//           width: 76px;
-//           height: 63px;
-//           text-align: center;
-//           padding-bottom: 5px;
-//           i, svg {
-//             font-size: 25px;
-//             width: 25px;
-//             height: 25px;
-//             color: #fff;
-
-//           }
-//           p {
-//             font-size: 11px;
-//             opacity: 0;
-//             transform: translateY(5px);
-//             transition: opacity 0.3s ease, transform 0.3s ease;
-//             margin: 5px 0 0 0;
-//             color: rgba(160, 33, 160);
-
-//           }
-//           &:hover i, &:hover svg {
-//             color: rgba(160, 33, 160);
-//           }
-//           &:hover p {
-//             opacity: 1;
-//             transform: translateY(0);
-//         }
-//         }
-//       }
-//     }
-//   }
-
-//   .divCv {
-//     width: 57%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: center;
-  
-//     .containerCV {
-//       display: flex;
-//       align-items: flex-start;
-//       justify-content: center;
-//       margin-top: 10%;
-//       position: relative;
-//       width: 100%;
-//       overflow: hidden;
-//       padding-bottom: 100%;
-  
-//       .CV {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         object-fit: contain;
-//       }
-//     }
-  
-//     .cvLink {
-//       padding-top: 15px;
-//       text-decoration: none;
-//       color: white;
-  
-//       &:hover {
-//         color: rgba(160, 33, 160);
-//       }
-//     }
-//   }
-  
-//   h1 {
-//     margin-bottom: 50px;
-//   }
-
-//   h2 {
-//     margin: 10px 0 30px;
-//     text-align: center;
-//     font-style: italic;
-//     font-size: 17px;
-//   }
-// }
-

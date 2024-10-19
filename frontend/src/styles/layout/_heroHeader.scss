@@ -1,3 +1,5 @@
+@import '../abstracts/_mixins';
+
 .heroHeader {
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgba(204, 21, 204, 0.7);
+    color: $primary-color;
     font-size: 30px;
     text-align: center;
     &__name {
@@ -59,13 +61,13 @@
     height: 60%;
 
     .png-logo {
-      filter: drop-shadow(0 0 15px rgba(123, 7, 123, 0.7));
+      filter: drop-shadow(0 0 15px $secondary-color);
       animation: pulse 2s infinite;
       transition: transform 0.3s ease, filter 0.3s ease;
       
       &:hover {
         cursor: pointer;
-        filter: drop-shadow(0 0 15px rgba(204, 21, 204, 0.6));
+        filter: drop-shadow(0 0 15px $primary-color);
       }
     }
 
@@ -92,7 +94,7 @@
       height: auto;
     }
     &__text {
-      font-size: 24px; // Réduire la taille du texte sur les petits écrans
+      font-size: 24px;
     }
   }
 }

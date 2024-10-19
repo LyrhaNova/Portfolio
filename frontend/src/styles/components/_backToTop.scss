@@ -1,9 +1,12 @@
+@import '../abstracts/mixins.scss';
+
 .back-to-top {
    position: fixed;
    bottom: 50px;
    right: 5%;
-   background-color: rgba(160, 33, 160, 0.1);
-   color: rgb(160, 33, 160);
+   background-color: $third-color;
+   color: $primary-color;
+
    border: none;
    padding: 20px;
    border-radius: 50%;
@@ -19,8 +22,8 @@
    }
    
    &:hover {
-      background-color: rgba(160, 33, 160, 0.7);
-      color: rgb(22, 19, 28)
+      background-color: $primary-color;
+      color: $background-color
    }
  }
  

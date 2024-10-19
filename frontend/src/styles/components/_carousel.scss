@@ -1,3 +1,5 @@
+@import '../abstracts/_mixins.scss';
+
 .swiper {
   width: 100%;
   height: auto;
@@ -16,12 +18,11 @@
     cursor: pointer;
     &:hover {
       transform: scale(1.04);
-      background-color: rgb(160, 33, 160, 0.03);
-      &__description {
-         border: 2px solid rgb(160, 33, 160);
-      }
       & p {
         color: white;
+     }
+     .swiper__card__description {
+      border: 2px solid $primary-color;
      }
     }
     & h2 {
@@ -48,7 +49,7 @@
      display: flex;
      flex-direction: column;
      justify-content: space-around;
-     border: 2px solid rgb(160, 33, 160, 0.5);
+     border: 2px solid $secondary-color;
      height: 200px;
      padding: 15px;
      width: 92%;
@@ -75,7 +76,7 @@
    transition: transform 0.3s ease;
  
    &::after {
-     color: rgb(160, 33, 160);
+     color: $primary-color;
    }
  
    &:hover {
@@ -92,7 +93,7 @@
  }
  
  .swiper .swiper-pagination-bullet {
-   background-color: rgb(160, 33, 160, 0.3);
+   background-color: $secondary-color;
    width: 10px;
    height: 10px;
    margin: 0 5px;
@@ -100,6 +101,6 @@
    transition: background-color 0.3s ease;
  
    &.swiper-pagination-bullet-active {
-     background-color: rgb(160, 33, 160);
+     background-color: $primary-color;
    }
 }

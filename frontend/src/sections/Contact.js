@@ -1,5 +1,4 @@
 import '../styles/layout/_contact.scss';
-import '../styles/components/_formContact.scss';
 import FormContact from '../components/FormContact.jsx';
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -7,7 +6,6 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact__container">
-        <h1>CONTACT</h1>
         <div className="backText">
           <Typewriter
             words={['Wanna talk ?']}

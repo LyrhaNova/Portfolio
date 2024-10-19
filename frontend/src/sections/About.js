@@ -7,7 +7,7 @@ export default function About() {
     <section id="about" className="about">
       <div className="about__content">
         <h1>À PROPOS</h1>
-        <div className="about__back-text">
+        <div className="backText">
           <Typewriter
             words={['Who ?']}
             loop={false}
