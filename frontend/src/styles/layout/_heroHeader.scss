@@ -57,10 +57,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 20%;
     height: 60%;
 
     .png-logo {
+      width: 100%;
       filter: drop-shadow(0 0 15px $secondary-color);
       animation: pulse 2s infinite;
       transition: transform 0.3s ease, filter 0.3s ease;
@@ -88,10 +89,14 @@
 @media (max-width: 900px) {
   .heroHeader {
     height: 800px;
-    .png-logo {
-      width: 80%;
-      height: auto;
-    }
+    &__logo {
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 70%;
+      }
     &__text {
       font-size: 17px;
       &__name {
@@ -102,9 +107,9 @@
 }
 
 /* Mobile devices */
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .heroHeader {
-    height: 800px;
+    height: 400px;
     .png-logo {
       width: 100%;
     }
