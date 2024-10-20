@@ -65,16 +65,20 @@
 }
 
 @media (max-width: 900px) {
-
+.projects {
+  height: 920px;
+  &__content {
+    width: 80%;
+  }
+}
 }
 
 @media (max-width: 550px) {
-  .projects {
-    height: 1000px;
-  
+  .projects { 
     &__content {
       width: 80%;
       padding: 20px;
+      border: 3px solid $secondary-color;
   
       .backText {
         top: 14%;
@@ -83,15 +87,11 @@
     }
   
     h1 {
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
     .backText {
       top: 12%;
       left: 50%;
     }
   }
-}
-
-@media (max-width: 400px) {
-
 }

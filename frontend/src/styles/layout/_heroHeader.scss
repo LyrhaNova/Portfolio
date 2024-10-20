@@ -107,10 +107,9 @@
   }
 }
 
-/* Mobile devices */
 @media (max-width: 550px) {
   .heroHeader {
-    // height: 700px;
+    height: 750px;
     &__logo {
       z-index: 3;
       display: flex;

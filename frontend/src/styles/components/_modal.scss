@@ -123,3 +123,44 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 1200px) {
+  .modal__overlay {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal__overlay {
+    max-width: 70%;
+  }
+  
+  .modal__infos {
+    padding: 10px 0;
+  }
+  
+  .modal__image-container {
+    height: 250px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+.modal__overlay {
+  max-width: 80%;
+  h2 {
+    font-size: 17px;
+    padding-bottom: 10px;
+  }
+}
+
+.modal__close {
+  top: 0px;
+  font-size: 40px;
+}
+
+.modal__image-container {
+  height: 200px;
+  margin-top: 10px;
+}
+}

@@ -83,13 +83,13 @@
   }
 }
 
-/* Mobile devices */
 @media (max-width: 550px) {
   .about {
     height: 900px;
     &__content {
       width: 80%;
       padding: 20px;
+      border: 3px solid $secondary-color;
     }
     h1 {
       margin-bottom: 40px;
@@ -98,7 +98,7 @@
       width: 90%;
     }
     .backText {
-      top: 14%;
+      top: 13%;
       left: 50%;
     }
   }
@@ -106,7 +106,7 @@
 
 @media (max-width: 400px) {
   .about {
-    height: 1100px;
+    height: 900px;
     &__content {
       width: 80%;
       padding: 20px;
