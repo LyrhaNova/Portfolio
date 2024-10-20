@@ -32,3 +32,14 @@
    height: auto;
  }
  
+
+ @media (max-width: 550px) {
+  .back-to-top {
+    position: fixed;
+    bottom: 25px;
+  }
+  
+  .back-to-top svg {
+    width: 20px;
+  }
+}
