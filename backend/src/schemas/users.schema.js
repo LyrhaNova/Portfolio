@@ -9,6 +9,10 @@ const userSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
+  accessToken: {
+    required: false,
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('users', userSchema);
