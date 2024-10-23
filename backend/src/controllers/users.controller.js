@@ -79,3 +79,81 @@ exports.login = async (req, res) => {
     return res.status(500).json({ message: 'Erreur serveur', error });
   }
 };
+
+exports.updateEmail = async (req, res) => {
+  try {
+    const { newEmail, password } = req.body;
+    const userId = req.user.userId;
+    if (!newEmail || !password) {
+      return res
+        .status(400)
+        .json({ message: 'Nouvel email et mot de passe sont obligatoires' });
+    }
+    // Vérification de l'existence de l'utilisateur
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+    // Vérification du mot de passe
+    const isMatch = await comparePassword(password, user.password);
+    if (!isMatch) {
+      return res
+        .status(401)
+        .json({ message: 'Mot de passe ou email incorrect' });
+    }
+    // Vérification que l'email n'est pas déjà utiliser
+    const emailExist = await User.findOne({ email: newEmail });
+    if (emailExists) {
+      return res.status(400).json({ message: 'Cet email est déjà utilisé' });
+    }
+    //Mise à jour de l'email
+    user.email = newEmail;
+    await user.save;
+
+    return res
+      .status(200)
+      .json({ message: 'Email mis à jour avec succès', email: user.email });
+  } catch (error) {
+    console.error("Erreur lors de la mise à jours de l'email", error);
+    return res.status(500).json({ message: 'Erreur serveur', error });
+  }
+};
+
+exports.updatePassword = async (req, res) => {
+  try {
+    const { oldPassword, newPassword } = req.body;
+    const userId = req.user.id;
+
+    if (!oldPassword || !newPassword) {
+      return res
+        .status(400)
+        .json({ message: 'Ancien et nouveau mot de passe sont obligatoires' });
+    }
+
+    // Vérification de l'existence de l'utilisateur
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+
+    // Vérification de l'ancien mot de passe
+    const isMatch = await comparePassword(oldPassword, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Ancien mot de passe incorrect' });
+    }
+
+    // Encrypter le nouveau mot de passe
+    const hashedPassword = await encryptPassword(newPassword);
+
+    // Mise à jour du nouveau mot de passe
+    user.password = hashedPassword;
+    await user.save;
+
+    return res
+      .status(200)
+      .json({ message: 'Mot de passe mis à jour avec succès' });
+  } catch (error) {
+    console.error('Erreur lors de la mise à jour du mot de passe', error);
+    return res.status(500).json({ message: 'Erreur serveur', error });
+  }
+};

@@ -1,0 +1,30 @@
+[33m29bc43b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Backend + minor fix
+[33m36482a2[m Backend
+[33mdd9d664[m Starting auth/login
+[33mb619385[m Adjust responsive
+[33mcbbd284[m Responsive full
+[33mf18ecc3[m Responsive Design
+[33m43f42c4[m Responsive minor changes
+[33m84e6386[m Responsive
+[33m5fb4c0a[m BEM & mixins scss
+[33mf840506[m Minor changes
+[33m3d48f6f[m Add name
+[33m15b034c[m Delete unused code
+[33m707e1c2[m Sections modifications
+[33m640a073[m Fix section sizes & bug
+[33mdd6f6e7[m Test for Vercel
+[33m0f352eb[m Clean code
+[33mf4437cd[m Code amelioration
+[33mb9897f4[m Changes vercel.json
+[33mf956396[m Skills & Contact add
+[33m44742e4[m Modale design & infos
+[33mda99404[m Carousel & Modal
+[33mb4e020a[m Modify Skills section
+[33m4a488c0[m Section Skills & Design
+[33m0f1613d[m Add logo
+[33me42d065[m Structures changes
+[33m1f31f94[m Section "compétences"
+[33md9c5f6e[m Design + fonts
+[33m8c653f5[m Settings SPA
+[33m4dfed50[m Initial commit
+[33m039c3b2[m Initial commit from Create Next App
