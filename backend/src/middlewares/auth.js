@@ -19,7 +19,7 @@ module.exports = (req, res, next) => {
     }
 
     // Vérification et décryptage du token JWT
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    const decodedToken = jwt.verify(token, 'lis!j15465hdfhKLJH15651');
     console.log('Token décodé:', decodedToken);
 
     // Récupération de l'ID utilisateur à partir du token déchiffré

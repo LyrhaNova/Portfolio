@@ -1,4 +1,4 @@
-const Project = require('../schemas/Projects.schema');
+const Project = require('../schemas/projects.schema');
 const mongoose = require('mongoose');
 // const path = require('path');
 

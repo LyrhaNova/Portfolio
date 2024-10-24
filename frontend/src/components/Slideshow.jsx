@@ -16,11 +16,11 @@ const ProjectsCarousel = () => {
 
   // Charger les données du fichier JSON
   useEffect(() => {
-    fetch('/projects.json')
+    fetch('http://180.149.196.136:3030/api/projects', { method: 'GET' })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error('Erreur lors de la récupération du fichier JSON');
-        }
+        // if (!response.ok) {
+        //   throw new Error('Erreur lors de la récupération du fichier JSON');
+        // }
         return response.json();
       })
       .then((data) => setProjects(data))

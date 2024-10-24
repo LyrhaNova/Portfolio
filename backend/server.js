@@ -19,10 +19,21 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// mongoose
+//   .connect(process.env.MONGODB_URI, {
+//     dbName: process.env.MONGODB_DB,
+//   })
+//   .catch((err) => {
+//     console.log('Erreur de connexion à MongoDB', err);
+//   });
+
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    dbName: process.env.MONGODB_DB,
-  })
+  .connect(
+    'mongodb+srv://lyrhanova:ksML8813PGBOp2kw@cluster0.gfnwn.mongodb.net/Portfolio?retryWrites=true&w=majority&appName=Cluster0',
+    {
+      dbName: 'Portfolio',
+    }
+  )
   .catch((err) => {
     console.log('Erreur de connexion à MongoDB', err);
   });

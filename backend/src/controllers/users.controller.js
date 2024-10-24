@@ -26,7 +26,7 @@ exports.signUp = async (req, res) => {
         .json({ message: 'Email et mot de passe sont obligatoires' });
     }
 
-    if (secret !== process.env.SECRET_CODE) {
+    if (secret !== 'SecretCodeWillBeSecret456') {
       return res.status(400).json({ message: 'Code de sécurité incorrect' });
     }
 
