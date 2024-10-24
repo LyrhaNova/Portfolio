@@ -83,38 +83,47 @@ exports.login = async (req, res) => {
 exports.updateEmail = async (req, res) => {
   try {
     const { newEmail, password } = req.body;
-    const userId = req.user.userId;
+    const userId = req.user.id;
+
+    console.log('ID utilisateur depuis le token:', userId);
+
     if (!newEmail || !password) {
       return res
         .status(400)
         .json({ message: 'Nouvel email et mot de passe sont obligatoires' });
     }
-    // Vérification de l'existence de l'utilisateur
+
+    // Recherche de l'utilisateur par son ID
     const user = await User.findById(userId);
+    console.log('Utilisateur trouvé:', user);
+
     if (!user) {
       return res.status(404).json({ message: 'Utilisateur non trouvé' });
     }
+
     // Vérification du mot de passe
     const isMatch = await comparePassword(password, user.password);
     if (!isMatch) {
-      return res
-        .status(401)
-        .json({ message: 'Mot de passe ou email incorrect' });
+      return res.status(401).json({ message: 'Mot de passe incorrect' });
     }
-    // Vérification que l'email n'est pas déjà utiliser
+
+    // Vérification que l'email n'est pas déjà utilisé
     const emailExist = await User.findOne({ email: newEmail });
-    if (emailExists) {
+    if (emailExist) {
       return res.status(400).json({ message: 'Cet email est déjà utilisé' });
     }
-    //Mise à jour de l'email
+
+    // Mise à jour de l'email
     user.email = newEmail;
-    await user.save;
+    await user.save();
+
+    console.log('Email mis à jour:', user.email);
 
     return res
       .status(200)
       .json({ message: 'Email mis à jour avec succès', email: user.email });
   } catch (error) {
-    console.error("Erreur lors de la mise à jours de l'email", error);
+    console.error("Erreur lors de la mise à jour de l'email", error);
     return res.status(500).json({ message: 'Erreur serveur', error });
   }
 };
@@ -147,7 +156,7 @@ exports.updatePassword = async (req, res) => {
 
     // Mise à jour du nouveau mot de passe
     user.password = hashedPassword;
-    await user.save;
+    await user.save();
 
     return res
       .status(200)
