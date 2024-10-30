@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PORTFOLIO 🌐
 
-## Getting Started
+Ce projet est mon portfolio personnel et professionnel, développé pour présenter mes compétences en développement web et mes réalisations précédentes. Le site est construit en utilisant une combinaison de technologies frontend et backend pour une expérience utilisateur fluide et rapide.
 
-First, run the development server:
+## 🚀 Portfolio en ligne
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Le portfolio est disponible en ligne à [cette adresse](https://www.b-celine.site/).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📋 Table des Matières
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Aperçu du Projet](#aperçu-du-projet)
+- [Fonctionnalités Principales](#fonctionnalités-principales)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Structure du Projet](#structure-du-projet)
+- [Construit avec](#construit-avec)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Aperçu du Projet
 
-To learn more about Next.js, take a look at the following resources:
+Ce projet met en avant un design moderne avec des animations et des interactions basées sur React et Next.js. Le portfolio présente des sections telles que **À propos**, **Projets**, **Compétences**, **Contact**, ainsi qu'un **CV téléchargeable**. L'interface est responsive pour une navigation optimale sur tous les types d'appareils.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Fonctionnalités Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Galerie de projets : Carrousel interactif présentant les projets.
 
-## Deploy on Vercel
+- Téléchargement de CV : Accès au CV en format PDF via un lien externe sécurisé.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Formulaire de contact : Formulaire fonctionnel pour les messages des visiteurs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Mode de Déploiement : Utilisation de PM2 et Nginx pour un hébergement en ligne stable.
+
+## Technologies Utilisées
+
+### Frontend
+
+- HTML5, SCSS : Structure et style des pages
+
+- JavaScript : Interactions et animations
+
+- React & Next.js : Structure et architecture du projet
+
+### Backend (API)
+
+- Node.js & Express : API REST pour les données dynamiques
+
+- MongoDB : Base de données NoSQL pour le stockage des données utilisateur
+
+### Serveur
+
+- LWS : Hébergement du site
+- PM2 : Gestionnaire de processus pour la stabilité du serveur
+
+### Structure du projet
+
+````
+/portfolio
+├── /api               # Backend avec Express et MongoDB
+├── /public            # Images et assets statiques
+├── /styles            # SCSS pour les styles globaux
+├── /components        # Composants React (ex. Header, Footer, Projects)
+└── pages              # Pages Next.js
+````
+
+## Construit avec
+
+### Langages
+
+- ``Javascript``
+- ``Express``
+- ``Next.js``
+- ``TypeScript``
+
+### Outils
+
+| TOOLS                  | DESCRIPTION                                    |
+|------------------------|------------------------------------------------|
+| ``VISUAL STUDIO CODE`` | _IDE_                                          |
+| ``GIT``                | _Logiciel de gestion de versions_              |
+| ``MongoDB``            | _Service de base de données_                   |
+| ``PM2``                | _Gestionnaire de processus pour Node.js_       |
+| ``Postman``            | _Test d'API et développement_                  |
+| ``Nginx``              | _Serveur web pour le reverse proxy_            |
+| ``Cloudinary``         | _Hébergement et gestion de médias en ligne_    |
+| ``EmailJS``            | _Envoi d'emails via formulaire de contact_     |
+| ``Sass/SCSS``          | _Préprocesseur CSS pour des styles avancés_    |
