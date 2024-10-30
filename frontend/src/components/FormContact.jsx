@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,19 +15,24 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
 
-    if (res.ok) {
+    emailjs.send(
+      'service_vguijzj',
+      'template_autdqjd',
+      {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message,
+      },
+      '0W0vVWBdX80dBPo6h'
+    )
+    .then((result) => {
       alert('Message envoyé avec succès !');
-    } else {
+      setFormData({ name: '', email: '', message: '' });
+    }, (error) => {
+      console.error('Erreur lors de l\'envoi du message:', error.text);
       alert("Échec de l'envoi du message");
-    }
+    });
   };
 
   return (

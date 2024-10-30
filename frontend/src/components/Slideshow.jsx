@@ -18,9 +18,6 @@ const ProjectsCarousel = () => {
   useEffect(() => {
     fetch('http://180.149.196.136:3030/api/projects', { method: 'GET' })
       .then((response) => {
-        // if (!response.ok) {
-        //   throw new Error('Erreur lors de la récupération du fichier JSON');
-        // }
         return response.json();
       })
       .then((data) => setProjects(data))

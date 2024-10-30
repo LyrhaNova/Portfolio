@@ -7,11 +7,16 @@ html {
 
 body {
   margin: 0;
-  background-color: $background-color;
-  color: white;
+  color: white; /* Cette règle affecte seulement le texte */
   font-family: 'Roboto Mono';
+  
+  /* Motif de fond */
+  background: 
+      repeating-linear-gradient(90deg, rgba(51, 18, 51, 0.2) 0, rgba(51, 18, 51, 0.1) 5%, transparent 0, transparent 100%),
+      repeating-linear-gradient(180deg, rgba(51, 18, 51, 0.2) 0, rgba(51, 18, 51, 0.1) 5%, transparent 0, transparent 100%);
+  background-color: rgb(22, 19, 28) !important; /* Ajout de !important */
+  background-size: 3em 3em;
 }
-
 section {
   position: relative;
   display: flex;

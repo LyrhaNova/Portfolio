@@ -53,6 +53,12 @@
      height: 200px;
      padding: 15px;
      width: 92%;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+         display: none;
+   }
 
      & p {
       text-align: left;

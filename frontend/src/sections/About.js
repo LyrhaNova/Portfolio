@@ -19,19 +19,13 @@ export default function About() {
           />
         </div>
         <p className="about__description">
-          Lorem ipsum dolor sit amet. Id enim quod et officia molestiae est
-          consequatur maiores nam animi voluptatum sit tempora internos eos
-          ducimus officia! Ea galisum vitae 33 porro nostrum id mollitia
-          nesciunt eos maiores ullam ut saepe tenetur qui beatae rerum. Eos sunt
-          quia ut placeat ducimus ut facilis fuga et ipsam numquam eos aperiam
-          minus ut consequuntur alias. Aut amet voluptatem ea aperiam neque et
-          totam nemo. Nam dolor fugiat aut commodi dicta qui aliquid
-          necessitatibus in corrupti necessitatibus quo sunt repellendus. Non
-          deleniti omnis At facilis eaque ut harum reiciendis et commodi
-          molestiae. Aut suscipit velit ut enim voluptatem in voluptas magnam
-          est voluptatem modi sed beatae rerum. Et temporibus odio et
-          exercitationem odio ut mollitia consequatur id consequatur alias est
-          minus nisi.
+          Attirée par les possibilités infinies de la technologie et ayant déjà
+          exploré le graphisme à travers des collaborations en design pour des
+          vidéastes, j'ai décidé de me former au développement web, avec une
+          spécialisation en front-end. Mon objectif est désormais de maîtriser
+          pleinement le front-end tout en consolidant mes compétences en
+          back-end. Créative, patiente et autonome, je suis toujours curieuse
+          d’apprendre et d’enrichir mes compétences techniques et humaines.
         </p>
       </div>
     </section>
