@@ -13,6 +13,7 @@ Le portfolio est disponible en ligne à [cette adresse](https://www.b-celine.sit
 - [Technologies Utilisées](#technologies-utilisées)
 - [Structure du Projet](#structure-du-projet)
 - [Construit avec](#construit-avec)
+- [Galerie d'images](#galerie-dimages)
 
 ---
 
@@ -84,3 +85,16 @@ Ce projet met en avant un design moderne avec des animations et des interactions
 | ``Cloudinary``         | _Hébergement et gestion de médias en ligne_    |
 | ``EmailJS``            | _Envoi d'emails via formulaire de contact_     |
 | ``Sass/SCSS``          | _Préprocesseur CSS pour des styles avancés_    |
+
+
+## Galerie d'images
+
+![Capture 1](https://i.imgur.com/XzL9s5Q.png)
+
+![Capture 2](https://i.imgur.com/cIfflrM.png)
+
+![Capture 3](https://i.imgur.com/IYuJlSs.png)
+
+![Capture 4](https://i.imgur.com/uvR8KOW.png)
+
+![Capture 5](https://i.imgur.com/EFSdA9f.png)
